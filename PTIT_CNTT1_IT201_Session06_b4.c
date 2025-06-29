@@ -1,17 +1,13 @@
 #include<stdio.h>
 
 void thapHanoi(int n, char A, char B, char C) {
-    if (n==0) {
-        printf("Input khong hop le\n");
-        return;
-    }
     if (n==1) {
-        printf("Input khong hop le\n");
+        printf("dia 1 di chuyen tu %c sang %c\n",A,C);
         return;
     }
     thapHanoi(n-1, A, C, B);
     printf("Dia %d di chuyen tu %c sang %c\n", n, A, C);
-    thapHanoi(n-1, B, C, A);
+    thapHanoi(n-1, B, A, C);
 }
 
 
